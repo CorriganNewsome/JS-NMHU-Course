@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		petName +
 		' ' +
 		streetName;
+	//code to change color based on user input
 	document.getElementById('greeting').style.color = favColor;
 });
 function getInput(prompText) {
