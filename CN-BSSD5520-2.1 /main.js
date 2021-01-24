@@ -1,23 +1,39 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
-	//look up an element in the document hierarchy by id
 	const greeting = document.getElementById('greeting');
 	const streetName = getInput('Please enter your street name.');
 	const petName = getInput('Please enter your pet name.');
 	var favColor = getInput('Which color is better (Blue,Green, or Red)');
 	const favLanguage = getInput('What is your favorite programming language?');
-	greeting.textContent =
-		'Oh, you must be the famous' +
-		' ' +
-		favLanguage +
-		' ' +
-		'hacker' +
-		' ' +
-		petName +
-		' ' +
-		streetName;
-	//code to change color based on user input
-	document.getElementById('greeting').style.color = favColor;
+
+	if (favColor === 'blue' || favColor === 'red' || favColor === 'green') {
+		greeting.textContent =
+			'Oh, you must be the famous' +
+			' ' +
+			favLanguage +
+			' ' +
+			'hacker' +
+			' ' +
+			petName +
+			' ' +
+			streetName;
+
+		//code to change color based on user input
+		document.getElementById('greeting').style.color = favColor;
+	} else {
+		greeting.textContent =
+			'Oh, you must be the famous' +
+			' ' +
+			favLanguage +
+			' ' +
+			'hacker' +
+			' ' +
+			petName +
+			' ' +
+			streetName;
+		document.body.style.backgroundColor = 'red';
+		h2.textContent = 'Access Granted';
+	}
 });
 function getInput(prompText) {
 	let name = prompt(prompText);
@@ -26,3 +42,4 @@ function getInput(prompText) {
 	}
 	return name;
 } //end function getInput(promptText)
+document.body.append(divider);
