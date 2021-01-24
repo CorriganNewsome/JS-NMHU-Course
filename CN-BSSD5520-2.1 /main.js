@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const greeting = document.getElementById('greeting');
 	const streetName = getInput('Please enter your street name.');
 	const petName = getInput('Please enter your pet name.');
-	const favColor = getInput('Which color is better (Blue,Green, or Red)');
+	var favColor = getInput('Which color is better (Blue,Green, or Red)');
 	const favLanguage = getInput('What is your favorite programming language?');
 	greeting.textContent =
 		'Oh, you must be the famous' +
@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		petName +
 		' ' +
 		streetName;
+	document.getElementById('greeting').style.color = favColor;
 });
-
 function getInput(prompText) {
 	let name = prompt(prompText);
 	while (name === '') {
