@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.write(
 			'Oh, you must be the famous' +
 				' ' +
-				favLanguage +
+				favLanguage.capitlize() +
 				' ' +
 				'hacker' +
 				'<em>' +
@@ -38,9 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 });
 
+//Function to capatilize the first letter in a string
 String.prototype.capitlize = function () {
 	return this.charAt(0).toUpperCase() + this.slice(1);
-};
+}; //end function capitlize()
 
 function getInput(prompText) {
 	let name = prompt(prompText);
