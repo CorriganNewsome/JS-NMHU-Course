@@ -31,5 +31,5 @@ function clearChoices() {
 } //end function clearChoice();
 function displayChoice(choice) {
 	let div = document.getElementById('content');
-	div.innerHTML = 'What a great choice <em>{choice}</em> is.';
+	div.innerHTML = 'What a great choice <em> ${choice} </em> is.';
 } //end function displayChoice(choice);

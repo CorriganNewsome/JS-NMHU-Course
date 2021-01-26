@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const petName = getInput('Please enter your pet name.');
 	var favColor = getInput('Which color is better (Blue,Green, or Red)');
 	const favLanguage = getInput('What is your favorite programming language?');
+	const name = petName + favColor;
 
 	if (favColor === 'blue' || favColor === 'red' || favColor === 'green') {
 		greeting.textContent =
@@ -14,12 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			' ' +
 			'hacker' +
 			' ' +
-			petName +
-			' ' +
-			streetName;
-
-		//code to change color based on user input
-		document.getElementById('greeting').style.color = favColor;
+			name.fontcolor(favColor);
 	} else {
 		greeting.textContent =
 			'Oh, you must be the famous' +
@@ -35,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		h2.textContent = 'Access Granted';
 	}
 });
+
 function getInput(prompText) {
 	let name = prompt(prompText);
 	while (name === '') {
