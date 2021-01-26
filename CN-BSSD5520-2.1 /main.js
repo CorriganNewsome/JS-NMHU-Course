@@ -42,4 +42,3 @@ function getInput(prompText) {
 	}
 	return name;
 } //end function getInput(promptText)
-document.body.append(divider);
